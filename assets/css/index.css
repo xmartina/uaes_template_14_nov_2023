@@ -1,0 +1,205 @@
+
+:root {
+  --Lato: 'Lato', san-serif;
+  --Poppins: 'Poppins', san-serif;
+  --body-family: 'Open Sans', sans-serif;
+  --Playfair: 'Playfair Display', sans-serif;
+  --heading-font-family: 'Work Sans', sans-serif;
+  --body-color: #6b6b6b;
+  --bg-color: #f7fcf9;
+  --white: #ffffff;
+  --heading-color: #252525;
+  --sec: #1b2945;
+  --primary: #3db166;
+  --rgba: rgb(25, 47, 89);
+  --light: #c1dcec;
+  --transition: 300ms linear; 
+  --h-red: rgba(211, 47, 47, 0.95);
+}
+
+.section{
+  padding: 60px 0;
+}
+
+/* ************************
+# Default Style 
+************************/
+
+.default-btn {
+  font-size: 16px;
+  color: var(--white) !important;
+  line-height: 1;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-table;
+  padding: 18px 30px;
+  font-weight: 600;
+  background-color: var(--primary);
+  border-radius: 3px;
+}
+.default-btn i {
+  position: relative;
+  top: 2px;
+  margin-left: 5px;
+}
+.default-btn::before,
+.default-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--sec);
+  z-index: -1;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.default-btn::after {
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+}
+.default-btn:hover {
+  color: var(--white);
+}
+.default-btn:hover::before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.default-btn:hover::after {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+
+/*
+Welcome Area Style
+======================================================*/
+.wlc-area {
+  position: relative;
+  z-index: 1;
+}
+.wlc-img {
+  position: relative;
+  /* padding-top: 40px; */
+  /* padding-bottom: 40px; */
+  /* padding-left: 40px; */
+  z-index: 1;
+}
+/* .wlc-img img{
+  height: auto;
+  width: 100%;
+} */
+.wlc-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 5px solid var(--primary);
+  z-index: -1;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  background: var(--white);
+}
+
+.wlc-img:hover::before {
+  border-color: var(--sec);
+}
+
+.wlc-content span {
+  font-size: 18px;
+  color: var(--primary);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.wlc-content h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.wlc-content p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.wlc-area .card-img-overlay{
+  height: 25%;
+  top: 75%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  margin-bottom: 20px !important;
+  padding-left: 30px;
+}
+.wlc-area .card-img-overlay h4{
+  color: var(--white);
+  font-weight: 600;
+  font-size: 24px;
+}.wlc-area .card-img-overlay p{
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--bg-color);
+}
+@media(min-width: 992px){
+  .wlc-img::before{
+    border: 10px solid var(--primary) !important;
+    width: 100% !important;
+  }.wlc-img {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+  }
+}
+@media(max-width: 1199px){
+  .wlc-area .card-img-overlay h4{
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 18px;
+    font-weight: 500;
+  }.wlc-area .card-img-overlay p{
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+@media(max-width: 991px){
+  .wlc-img{
+    margin-bottom: 30px;
+  }.wlc-area .card-img-overlay h4{
+    font-size: 24px !important;
+  }
+}
+@media(max-width: 567px){
+  .wlc-img{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+  }
+}
+@media(max-width: 400px){
+  .wlc-area .card-img-overlay h4{
+    font-size: 16px !important;
+    margin-bottom: 0px !important;
+  }.wlc-content h2{
+    font-size: 35px !important;
+  }.wlc-area .card-img-overlay p{
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+@media(max-width: 1023px){
+  .wlc-area .card-img-overlay{
+    height: 35%;
+    top: 65%;
+  }
+}
+
